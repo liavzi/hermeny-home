@@ -1,14 +1,15 @@
 {
 	"test": "productionTestValue"
 	,"paypal":{
-		"returnUrl" : "return=http://www.hermeny.co.il/#/afterPayPalSuccess"
-		,"cancelUrl" : "cancel_return=http://www.hermeny.co.il/#/payment/myOrder"
+		"returnUrl" : "return=http://home-hermeny.rhcloud.com/#/afterPayPalSuccess"
+		,"cancelUrl" : "cancel_return=http://home-hermeny.rhcloud.com//#/payment/myOrder"
 		,"nvpApiUrl" : "https://api-3t.paypal.com/nvp"	
 		,"confirmUrl" : "https://www.paypal.com/cgi-bin/webscr"
+		,"notifyUrl" : "notify_url=https://home-hermeny.rhcloud.com/api/txn"
 	}
 	,"passport":{
 		"google":{
-			"callbackURL" : "http://node-hermeny.rhcloud.com/auth/google/callback"
+			"callbackURL" : "http://home-hermeny.rhcloud.com/auth/google/callback"
 		}				
 	}
 }

@@ -22,7 +22,8 @@ paypalButtonRouter.get("/paypalButton", function (req, res, next) {
             L_BUTTONVAR5: config.get("paypal.returnUrl"),
             L_BUTTONVAR6: config.get("paypal.cancelUrl"),
             L_BUTTONVAR7: "shipping=" + req.order.shipmentFee,
-            L_BUTTONVAR8: "invoice=" + req.order._id
+            L_BUTTONVAR8: "invoice=" + req.order._id,
+            L_BUTTONVAR9: config.get("paypal.notifyUrl")
         }
     }, function (err, httpResponse, body) {
         var response = querystring.parse(body);

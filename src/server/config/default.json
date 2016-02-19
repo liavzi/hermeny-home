@@ -8,6 +8,7 @@
 		,"password" : "UCR8LUJ9PM9TVJCQ"	
 		,"signature" : "AFcWxV21C7fd0v3bYYYRCpSSRl31A4EARGvq3nRJnENEMMv1Xa0yzasr"
 		,"confirmUrl" : "https://www.sandbox.paypal.com/cgi-bin/webscr"
+        ,"notifyUrl" : "notify_url=https://home.localtunnel.me/api/txn"
 	}
 	,"coupon" : {
 		"name" : "PERFECTEVENT"

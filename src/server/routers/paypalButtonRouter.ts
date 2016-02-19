@@ -24,6 +24,7 @@ paypalButtonRouter.get("/paypalButton",(req : R.OrderActionRequest,res :express.
 			,L_BUTTONVAR6 : config.get("paypal.cancelUrl")
 			,L_BUTTONVAR7 : `shipping=${req.order.shipmentFee}`
 			,L_BUTTONVAR8 : `invoice=${req.order._id}`
+			,L_BUTTONVAR9 : config.get("paypal.notifyUrl")
 		}	
 	},function(err,httpResponse,body){
 		let response = querystring.parse(body);
