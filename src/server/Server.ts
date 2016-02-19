@@ -20,7 +20,7 @@ console.log(config.get("test"));
 
 
 if(process.env.OPENSHIFT_MONGODB_DB_URL){
-    let mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + "node";
+    let mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + "home";
     mongoose.connect(mongodb_connection_string);
 }
 else{

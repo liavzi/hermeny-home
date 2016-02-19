@@ -16,7 +16,7 @@ var MongoStore = require('connect-mongo')(session);
 var config = require("config");
 console.log(config.get("test"));
 if (process.env.OPENSHIFT_MONGODB_DB_URL) {
-    var mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + "node";
+    var mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + "home";
     mongoose.connect(mongodb_connection_string);
 }
 else {
