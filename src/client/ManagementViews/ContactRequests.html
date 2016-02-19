@@ -1,0 +1,20 @@
+
+<div ng-controller="ContactRequests as cr">
+  <button ng-click="cr.delete()" class="btn btn-danger">מחק</button>
+  <table class="table table-hover table-responsive">
+    <tbody>
+      <tr>
+        <th>מזהה</th>
+        <th>שם</th>
+        <th>תאריך שליחה</th>
+      </tr>
+      <tr ng-repeat="request in cr.requests" ng-click="cr.selectedRequest = request" ng-class="{active:image.selectedImage.name===image.name}">
+        <td>{{request._id}}</td>
+        <td>{{request.customerName}}</td>
+        <td>{{request.submittedDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h1>פרטי בקשה</h1>
+  <pre dir="ltr">{{cr.selectedRequest | json}}</pre>
+</div>

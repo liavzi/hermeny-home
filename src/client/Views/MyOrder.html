@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-md-8">
+       <hy-order order-model="orderModel" on-order-line-removed="payment.cancelPaymentSection()"></hy-order>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">     
+        <div class="h2 bold underline">סיכום הזמנה:</div>
+        <table class="table table-responsive">
+            <tr>
+                <td>סה"כ הזמנה:</td>
+                <td>{{orderModel.order.total}}</td>
+            </tr>
+            <tr ng-class="{'line-through' : orderModel.order.shipmentFee===0 }">
+                <td>דמי משלוח:</td>
+                <td>{{orderModel.order.shipmentFee}}</td>
+            </tr>
+            <tr class="bold">
+                <td>סה"כ לתשלום:</td>
+                <td>{{orderModel.order.total + orderModel.order.shipmentFee}}</td>
+            </tr>
+        </table>   
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" >
+        <button ng-disabled="payment.showPaymentOptions===true" ng-click="payment.pay()" class="btn btn-primary">לתשלום</button>
+        <div class="paypal-cards-logo-holder">
+            <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal - הדרך הקלה והבטוחה לשלם באינטרנט!">               
+        </div>
+        <div class="paypal-logo-holder">
+            <img src="https://www.paypalobjects.com/webstatic/en_US/logo/pp_cc_mark_111x69.png" alt="PayPal - הדרך הקלה והבטוחה לשלם באינטרנט!">
+        </div>
+    </div>
+</div>
+<div class="row" ng-if="payment.showPaymentOptions===true">
+    <div class="col-md-12">      
+        <div class="row">
+            <div class="col-md-12">    
+                <div class="form-group">
+                    <label for="emailInput" class="control-label">בחר אמצעי תשלום:</label>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <select class="form-control input-lg col-md-3" ng-model="payment.paymentMethod">
+                                <option value="" disabled selected>בחר אמצעי תשלום</option>
+                                <option value="1">כרטיס אשראי</option>
+                                <option value="2">PayPal</option>
+                            </select>   
+                        </div>
+                    </div>    
+                </div>                  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">    
+                <p ng-if="payment.paymentMethod ==='1'">התשלום באמצעות כרטיס אשראי מתבצע ע"י אתר PayPal.<br>לאחר המעבר לאתר בחר באפשרות "שלם באמצעות כרטיס אשראי".</p>
+                <div style="margin-top:15px" ng-if="payment.paymentMethod ==='2' || payment.paymentMethod==='1'" ng-bind-html="payment.paypalButton"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

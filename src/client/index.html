@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href="content/bootstrap.css" rel="stylesheet" />
+        <link href="content/metro-bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/cdnjs/3.3.1/css/bootstrap-rtl.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+        <link rel="stylesheet" href="content/animate.css" />
+        <link rel="stylesheet" href="content/style.css" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+        <title>Hermeny כלים לארוע שלך</title>
+    </head>
+    <body dir = "rtl">
+        <a target="_blank" class="facebook-link" href="https://www.facebook.com/Hermeny-%D7%94%D7%A8%D7%9E%D7%A0%D7%99-%D7%97%D7%93-%D7%A4%D7%A2%D7%9E%D7%99-526493790839297/timeline/">
+            <img src="/resources/images/FB-f-Logo__blue_50.png">
+        </a>
+        <nav class="navbar" role="navigation">
+
+                <div class="navbar-header">
+                    <a ui-sref="home"><img class="logo-image" src="http://googledrive.com/host/0B5LolexEjEygNTllR3MxU3BHSEk/hermeny-logo.png"></a>
+                </div>
+                <div>
+                    <ol class="nav navbar-nav navbar-right">
+                        <li><a ui-sref="delivery"><i class="fa fa-truck" style="margin-left:5px"></i>משלוח חינם בקנייה מעל 125 ש"ח</a></li>
+                    </ol>
+                    <ol class="nav navbar-nav navbar-left">
+                        <li><a ui-sref="home"><i class="fa fa-home"></i> ראשי</a></li>
+                        <li><a ui-sref="catalog"><i  class="fa fa-book"></i>קטלוג</a></li>
+                        <li><a ui-sref="payment.myOrder"><i  class="fa fa-shopping-cart"></i>ההזמנה שלי</a></li>
+                    </ol>
+                </div>
+
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div ui-view="main-view" class="main-view"></div>
+            </div>
+            <div class="row bottom-nav">
+                <div class="col-xs-7 col-xs-offset-4">
+                    <ol class="list-inline sub-menu">
+                        <li><a ui-sref="contact" style="color :red">צור קשר</a></li>
+                        <li><a ui-sref="delivery" style="color :red">מדיניות משלוחים</a></li>
+                        <li><a ui-sref="about" style="color :red">קצת עלינו</a></li>
+                        <li>&copy; כל הזכויות שמורות להרמני</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src=/requireJS-config/requireConfig.js></script>
+        <script data-main="/app/app.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+    </body>
+</html>

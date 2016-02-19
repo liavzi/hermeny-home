@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <button type="button" class="close" style="width:50px" ng-click="details.close()" aria-hidden="true">&times;</button>
+  <h4 class="bold modal-title">פרטי מוצר</h4>
+</div>
+<div class="modal-body">
+	<div class="row" style="margin:0">
+		<div class="col-md-4">
+                        <div class="row" style="padding:0">
+                            <span class="product-desc">{{details.product.description}}</span>
+                        </div>
+                        <div class="row" style="padding:0">
+                                <uib-alert ng-repeat="alert in details.alerts" type="success" close="details.closeAlert($index)">{{alert.msg}}</uib-alert>
+                        </div>		
+		</div>
+		<div class="col-md-8">
+			<img class="img img-responsive" ng-src="{{details.product.imageUrl}}">
+		</div>
+	</div>		
+</div>
+<div class="modal-footer">
+        <div class="product-buttons">
+            <div class="input-group quantity-buttons">
+                <span class="input-group-btn">
+                    <button class="fa fa-plus  btn btn-default btn-sm input"  ng-click="details.product.quantity = details.product.quantity + 1"></button>
+                </span>
+                <input type="number" ng-model="details.product.quantity" class="form-control input-sm" min="0">
+                <span class="input-group-btn">
+                    <button class="fa fa-minus  btn btn-default btn-sm input" ng-disabled="details.product.quantity<=0" ng-click="details.product.quantity = details.product.quantity - 1"></button>
+                </span>
+            </div>
+            <button ng-disabled="details.product.quantity<=0" ng-click="details.addToCart()" class="btn btn-success add-to-cart">הוסף לסל</button>
+        </div>
+</div>

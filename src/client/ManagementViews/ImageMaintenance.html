@@ -1,0 +1,30 @@
+
+<div ng-controller="imageMaintenance as im">
+  <div class="row"><a ng-disabled="!im.selectedImage" ng-click="im.deleteImage(im.selectedImage)" class="btn btn-danger">מחק </a></div>
+  <div class="row">
+    <div class="col-2">
+      <form name="imageMaintenanceForm">
+        <button ngf-select="" ng-model="im.files" ngf-multiple="true" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB">בחר תמונות</button>
+        <button type="submit" ng-click="im.uploadFiles()">העלה                  </button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-hover table-responsive">
+        <th>
+          <tbody>
+            <tr>
+              <th>שם</th>
+              <th>תצוגה</th>
+            </tr>
+            <tr ng-repeat="image in im.images" ng-click="im.selectedImage=image" ng-class="{active:image.selectedImage.name===image.name}" class="reg-table-row">
+              <td>{{image._id}}</td>
+              <td><img ng-src="{{image.imageUrl}}"/></td>
+            </tr>
+          </tbody>
+        </th>
+      </table>
+    </div>
+  </div>
+</div>

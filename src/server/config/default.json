@@ -1,0 +1,29 @@
+{
+	"test": "defualtTestValue"
+	,"paypal":{
+		"returnUrl" : "return=localhost:8080/#/afterPayPalSuccess"
+		,"cancelUrl" : "cancel_return=localhost:8080/#/myOrder"	
+		,"nvpApiUrl" : "https://api-3t.sandbox.paypal.com/nvp"
+		,"user" : "hermeny.one.time-facilitator_api1.gmail.com"
+		,"password" : "UCR8LUJ9PM9TVJCQ"	
+		,"signature" : "AFcWxV21C7fd0v3bYYYRCpSSRl31A4EARGvq3nRJnENEMMv1Xa0yzasr"
+		,"confirmUrl" : "https://www.sandbox.paypal.com/cgi-bin/webscr"
+	}
+	,"coupon" : {
+		"name" : "PERFECTEVENT"
+		,"minOrder" : 125
+	}
+	,"passport":{
+		"google":{
+			"clientID" : "182243328912-qgkbqvdkv3g81lr5sbuithf04jrcns24.apps.googleusercontent.com"
+			,"clientSecret" : "tmol5ZgFbBvSd81Zi682DZaK"
+			,"callbackURL" : "http://localhost:8080/auth/google/callback"
+		}				
+	}
+	,"session":{
+		"secret" : "keyboard cat"				
+	}
+	,"order":{
+		"shipmentFee" : 25
+	}
+}

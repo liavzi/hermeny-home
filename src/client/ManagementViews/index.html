@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <link href="/content/bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/content/metro-bootstrap.css" />
+        <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/cdnjs/3.3.1/css/bootstrap-rtl.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+        <link rel="stylesheet" href="/content/animate.css" />
+        <link rel="stylesheet" href="/content/style.css" />
+        <link href="/content/selectize.bootstrap3.css" rel="stylesheet" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+        <link href="/ScriptsLibs/ui.select/ui.select.css" rel="stylesheet" />
+        <title>Peamit Management</title>
+    </head>
+    <body dir="rtl">
+        <nav class="navbar navbar-inverse" role="navigation">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">פעמית-ניהול</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul class="nav nav-tabs nav-stacked span1">
+                        <li><a href="#ProductsView">ניהול מוצרים</a></li>
+                        <li><a href="#TagsView">ניהול תגיות</a></li>
+                        <li><a href="#ClosedOrders">הזמנות</a></li>
+                        <li><a href="#ImageMaintenance">תמונות</a></li>
+                        <li><a href="#ContactRequests">בקשות צור קשר</a></li>
+                    </ul>
+                </div>
+                <div class="view-container col-sm-9">
+                    <div ng-view></div>
+                </div>
+        </div>
+        </div>
+        <script type="text/javascript" src=/requireJS-config/requireConfig.js></script>
+        <script data-main="/peamit-management/PeamitManagement.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+    </body>
+</html>

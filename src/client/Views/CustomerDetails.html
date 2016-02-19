@@ -1,0 +1,22 @@
+<form  novalidate class="form-horizontal customer-details" role="form">
+    <div class="form-group">
+        <label for="nameInput" class="control-label">שם מלא:</label>
+        <input ng-model="payment.customerDetails.fullName" type="text" class="form-control" id="nameInput" placeholder="שם מלא">
+    </div>
+    <div class="form-group">
+        <label for="addressInput" class="control-label">כתובת:</label>
+        <input ng-model="payment.customerDetails.address" type="text" class="form-control" id="addressInput" placeholder="כתובת">
+    </div>
+    <div class="form-group">
+        <label for="phoneInput" class="control-label">טלפון\פלאפון:</label>
+        <input ng-model="payment.customerDetails.phoneNumber" type="text" class="form-control" id="phoneInput" placeholder="טלפון\פלאפון">
+    </div>
+    <div class="form-group">
+        <label for="emailInput" class="control-label">אימייל:</label>
+        <input ng-model="payment.customerDetails.email" type="email" class="form-control" id="emailInput" placeholder="אימייל">
+    </div>
+    <div class="form-group">
+        <button ng-click="payment.goToChoosePaymentMethod()" type="submit" class="btn btn-primary">המשך</button>
+    </div>
+</form>
+

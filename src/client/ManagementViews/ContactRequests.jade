@@ -1,0 +1,15 @@
+div(ng-controller="ContactRequests as cr")
+	button.btn.btn-danger(ng-click="cr.delete()") מחק
+	table.table.table-hover.table-responsive
+		tbody
+			tr
+				th מזהה
+				th שם
+				th תאריך שליחה
+			tr(ng-repeat='request in cr.requests',ng-click='cr.selectedRequest = request', ng-class='{active:image.selectedImage.name===image.name}')
+				td {{request._id}}
+				td {{request.customerName}}
+				td {{request.submittedDate}}
+	h1 פרטי בקשה
+	pre(dir="ltr") {{cr.selectedRequest | json}}
+	

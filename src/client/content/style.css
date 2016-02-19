@@ -1,0 +1,273 @@
+body {
+  background-color: #cfe9f1;
+  color: #333;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: large;
+  font-weight: 300;
+  line-height: 1.4;
+  height: 100%;
+  min-width: 1024px;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-animation: fadeIn,0.75s,ease;
+  animation: fadeIn,0.75s,ease;
+}
+.thumbnail {
+  text-align: center;
+}
+.product-sold-modal {
+  position: fixed;
+  top: 25%;
+}
+.product-details-modal .product-buttons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.product-details-modal .product-buttons .quantity-buttons {
+  width: 50%;
+}
+.product-details-modal .product-buttons .add-to-cart {
+  margin-top: 10px;
+}
+.product-details-modal .img {
+  max-height: 60vh;
+}
+.product-details-modal .product-desc {
+  white-space: pre-wrap;
+  font-size: larger;
+}
+.catalog-tag.ng-enter {
+  -webkit-animation: fadeIn 0.75s ease;
+  animation: fadeIn 0.75s ease;
+}
+.catalog-product.ng-enter {
+  -webkit-animation: fadeIn 0.75s ;
+  animation: fadeIn 0.75s ;
+}
+.order-line.ng-enter {
+  -webkit-animation: bounceIn 0.75s ;
+  animation: bounceIn 0.75s ;
+}
+.customer-details.ng-hide-remove {
+  -webkit-animation: fadeIn 0.75s ;
+  animation: fadeIn 0.75s ;
+}
+.peamit-alert.ng-enter {
+  -webkit-animation: fadeIn 0.75s ;
+  animation: fadeIn 0.75s ;
+}
+.peamit-alert.ng-leave {
+  -webkit-animation: fadeOut 0.75s ;
+  animation: fadeOut 0.75s ;
+}
+.product-tag {
+  height: 250px;
+  cursor: pointer;
+}
+.product-tag img {
+  height: 70%;
+}
+.product-tag .caption {
+  vertical-align: top;
+  height: 30%;
+}
+.group-tag .product-tag {
+  height: 200px;
+}
+.group-tag .product-tag img {
+  display: block;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffcc00;
+  height: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.group-tag .product-tag .caption {
+  text-align: center;
+  vertical-align: top;
+  height: 20%;
+}
+.group-tag .tag-name {
+  margin: 0 !important;
+}
+.occasion-tag .product-tag {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffcc00;
+}
+.navbar .navbar-nav .fa {
+  font-size: large;
+  margin-left: 3px;
+}
+.bold {
+  font-weight: bold;
+}
+.product-for-selling {
+  font-weight: bold;
+  height: 370px;
+}
+.product-for-selling img {
+  height: 150px;
+}
+.product-for-selling .product-img {
+  cursor: pointer;
+}
+.product-for-selling .prodcut-price {
+  height: 40px;
+}
+.product-for-selling .product-name {
+  height: 80px;
+}
+.product-for-selling .add-to-order {
+  margin-top: 10px;
+}
+.navbar-header {
+  float: none;
+  position: absolute;
+  right: calc(50% - 182.5px);
+}
+.navbar-brand {
+  font-size: 50px;
+  font-style: italic;
+}
+.navbar-brand .sub-header {
+  margin-right: 0px;
+  font-size: 32px;
+  font-style: normal;
+  color: #ffffff;
+}
+.product-tags-title {
+  background-color: #ffcc00;
+  display: inline-block;
+}
+.sub-menu li {
+  margin: 10px;
+}
+.sub-menu li a {
+  cursor: pointer;
+}
+.navbar {
+  background-color: black;
+}
+.navbar a {
+  color: #ffffff;
+}
+.facebook-link {
+  position: absolute;
+  margin-top: 70px;
+  margin-right: 95%;
+}
+.facebook-link img {
+  height: 34px;
+}
+.reg-table-row {
+  max-height: 20px;
+}
+.reg-table-row td {
+  height: 100%;
+}
+.reg-table-row td img {
+  height: 100%;
+}
+.logo-image {
+  height: 53px;
+}
+.paypal-cards-logo-holder {
+  display: inline-block;
+}
+.paypal-cards-logo-holder img {
+  height: 50px;
+}
+.paypal-logo-holder {
+  display: inline-block;
+}
+.paypal-logo-holder img {
+  height: 50px;
+}
+.underline {
+  text-decoration: underline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.shipment-pic {
+  cursor: pointer;
+  position: absolute;
+  left: 0.5vw;
+  width: 124px;
+  top: 125px;
+  border: solid red;
+  border-width: 2px;
+  height: 200px;
+}
+.shipment-pic img {
+  height: 100%;
+  width: 100%;
+}
+.delivery-img {
+  float: left;
+  width: 20%;
+  margin: auto;
+}
+.bottom-nav {
+  margin-top: 50px;
+}
+.form-horizontal .control-label {
+  text-align: right !important;
+}
+.remove-order-line-icon {
+  cursor: pointer;
+}
+.product-price .fa-ils {
+  font-size: 0.7em;
+}
+.vertical-align {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.main-page-carousel {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  z-index: 100;
+}
+.main-page-carousel .go-to-catalog {
+  position: fixed;
+  z-index: 101;
+  bottom: 15vh;
+  left: calc(50vw - 106px);
+}
+.main-page-carousel .go-to-catalog .btn {
+  font-size: 2em;
+}
+.main-page-carousel .carousel-control .glyphicon.glyphicon-chevron-right {
+  z-index: 101;
+  position: fixed;
+  right: 40px;
+}
+.main-page-carousel .carousel-control .glyphicon.glyphicon-chevron-left {
+  z-index: 101;
+  position: fixed;
+  left: 40px;
+}
+.catalog-carousel .carousel {
+  height: 400px !important;
+  overflow-y: hidden;
+}

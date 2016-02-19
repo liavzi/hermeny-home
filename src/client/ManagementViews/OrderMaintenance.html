@@ -1,0 +1,6 @@
+<div ng-controller="orderMaintenance as om">
+    <hy-order order-model="om"></hy-order>  
+    <pre dir="ltr">
+        {{om.order.paymentInformation | json}}
+    </pre>
+</div>

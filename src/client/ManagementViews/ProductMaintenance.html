@@ -1,0 +1,36 @@
+﻿<div>
+    <form name="ProductMaintenanceForm" novalidate class="form-horizontal">
+        <div class="form-group" ng-class="{'has-error':ProductMaintenanceForm.productId.$invalid}">
+            <label class="control-label" for="productId"> מזהה</label>
+            <input class="form-control" id="productId" type="number" name="productId" ng-model="product._id" ng-number="true" ng-required="true" />
+            <span ng-show="ProductMaintenanceForm.productId.$error.required" class="help-block col-sm-2">אנא הכנס מספר כמזהה למוצר</span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productName"> שם</label>
+            <input class="form-control" id="productName" type="text" name="productName" ng-model="product.name" required />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productPrice"> מחיר</label>
+            <input  class="form-control" id="productPrice"  type="number" name="productPrice"  ng-model="product.prices[0].value" required />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productQuantity"> מס' יחידות</label>
+            <input  class="form-control" id="productQuantity"  type="number" name="productQuantity"  ng-model="product.quantityInPkg" required />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productImgUrl">כתובת תמונה(url)</label>
+            <input dir="ltr" class="form-control" id="productImgUrl" type="text" name="productImgUrl" ng-model="product.imageUrl"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productDescription">תיאור</label>
+            <textarea  class="form-control" id="productDescription" type="text" name="productDescription" ng-model="product.description"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="productMaxQuantityInOrder">מס' יחידות מקסימום בהזמנה</label>
+            <textarea  class="form-control" id="productMaxQuantityInOrder" type="numebr" name="productMaxQuantityInOrder" ng-model="product.maxQuantityInOrder"/>
+        </div>
+
+        <input type="submit" ng-disabled="ProductMaintenanceForm.$invalid" class="btn btn-default" value="Submit" ng-click = "AddProduct()">
+    </form>
+</div>
+

@@ -1,0 +1,10 @@
+{
+	"paypal":{
+		"user" : "PAYPAL_USER"
+		,"password" : "PAYPAL_PASSWORD"	
+		,"signature" : "PAYPAL_SIGNATURE"
+	}
+	,"session":{
+		"secret" : "SESSION_SECRET"				
+	}
+}

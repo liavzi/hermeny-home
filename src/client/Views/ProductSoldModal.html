@@ -1,0 +1,10 @@
+<div class="modal-body">
+    <i class="fa fa-check" style="color : green"></i>
+    <span> {{soldProduct.quantity}}</span>
+    <span>יחידות נוספו בהצלחה לסל</span>
+    <div>{{soldProduct.name}}</div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="$close({})">המשך לקנות</button>
+    <button class="btn btn-warning" ng-click="pay()">סיום הזמנה</button>
+</div>

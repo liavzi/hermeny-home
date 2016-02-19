@@ -1,0 +1,327 @@
+body {
+  background-color: rgb(207, 233, 241);
+  color: #333;
+  font-family: "Roboto",Arial,sans-serif;
+  font-size: large;
+  font-weight: 300;
+  line-height: 1.4;
+  height: 100%;
+  min-width: 1024px;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  animation: fadeIn,0.75s,ease;
+}
+
+.thumbnail{
+  text-align: center;
+}
+
+.animation(@name;@duration;@speed:~""){
+  animation: @arguments;
+}
+
+.product-sold-modal{
+  position: fixed;
+  top: 25%;
+}
+
+.product-details-modal{
+  .product-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .quantity-buttons{
+      width: 50%;
+    }
+    .add-to-cart{
+      margin-top: 10px;
+    }
+  }
+  .img{
+    max-height: 60vh;
+  }
+  .product-desc{
+    white-space: pre-wrap;
+    font-size: larger;
+  }
+
+}
+
+.catalog-tag{
+  &.ng-enter{
+    .animation(fadeIn,0.75s,ease);
+  }
+}
+
+.catalog-product{
+  &.ng-enter{
+    .animation(fadeIn,0.75s);
+  }
+}
+
+.order-line{
+  &.ng-enter{
+    .animation(bounceIn,0.75s);
+  }
+}
+
+.customer-details{
+  &.ng-hide-remove{
+    .animation(fadeIn,0.75s);
+  }
+}
+
+.peamit-alert{
+  &.ng-enter{
+    .animation(fadeIn,0.75s);
+  }
+  &.ng-leave{
+    .animation(fadeOut,0.75s);
+  }
+}
+
+.product-tag {
+  height: 250px;
+  cursor: pointer;
+  img{
+    height: 70%;
+  }
+  .caption{
+    vertical-align: top;
+    height: 30%;
+  }
+}
+
+.group-tag{
+  .product-tag{
+    height: 200px;
+    img{
+      display: block;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #ffcc00;
+      height: 65%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .caption{
+      text-align: center;
+      vertical-align: top;
+      height: 20%;
+    }
+  }
+  .tag-name{
+    margin: 0 !important;    
+  }
+}
+
+.occasion-tag{
+  .product-tag{
+      border-style: solid;
+      border-width: 2px;
+      border-color: #ffcc00;
+  }
+}
+
+.navbar{
+  .navbar-nav{
+    .fa{
+      font-size: large;
+      margin-left: 3px;
+    }
+  }
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.product-for-selling{
+  .bold;
+  height: 370px;
+  img{
+    height: 150px;
+  }
+  .product-img{
+    cursor: pointer;
+  }
+  .prodcut-price{
+    height: 40px;
+  }
+  .product-name{
+    height: 80px;   
+  }
+  .add-to-order{
+    margin-top: 10px;
+  }
+}
+
+.navbar-header{
+  float: none;
+  position: absolute;
+  right: calc(~"50% - 182.5px");
+}
+
+.navbar-brand {
+  font-size: 50px;
+  font-style: italic;
+  .sub-header{
+    margin-right: 0px;
+    font-size: 32px;
+    font-style: normal;
+    color: #ffffff;
+  }
+}
+
+.product-tags-title{
+  background-color: #ffcc00;
+  display: inline-block;
+}
+
+.sub-menu{
+  li{
+    margin:10px;
+    a{
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar{
+  background-color: black;
+  a{
+    color: #ffffff;
+  }
+}
+
+.facebook-link{
+  img{
+     height: 34px;    
+  }
+  position: absolute;
+  margin-top: 70px;
+  margin-right: 95%;
+}
+
+.reg-table-row{
+  max-height: 20px;
+  td{
+    height: 100%;
+    img{
+      height: 100%;
+    }
+  }
+}
+
+.logo-image{
+  height: 53px;
+}
+
+.paypal-cards-logo-holder{
+  display: inline-block;
+  img{
+    height: 50px;
+  }
+}
+
+.paypal-logo-holder{
+  display: inline-block;
+  img{
+    height: 50px;
+  }
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.line-through{
+  text-decoration: line-through
+}
+
+.no-padding{
+  padding: 0 !important;
+}
+
+.shipment-pic{
+  cursor: pointer;
+  position: absolute;
+  left: 0.5vw;
+  width: 124px;
+  top: 125px;
+  border: solid red;
+  border-width: 2px;
+  height: 200px;
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.delivery-img{
+  float: left;
+  width: 20%;
+  margin: auto;
+}
+
+.bottom-nav{
+  margin-top: 50px;
+}
+
+.form-horizontal{
+  .control-label{
+    text-align: right !important;
+  }
+} 
+
+.remove-order-line-icon{
+  cursor: pointer;
+}
+
+.product-price{
+  .fa-ils{
+    font-size: 0.7em;
+  }
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.main-page-carousel{
+  position: absolute;
+  left: 0;
+  top:50px;
+  width:100%;
+  z-index: 100;
+  .go-to-catalog{
+    position: fixed;
+    z-index: 101;
+    bottom: 15vh;
+    left: calc(~"50vw - 106px");
+    .btn{
+      font-size: 2em;
+    }   
+  }
+  .carousel-control{
+    .glyphicon.glyphicon-chevron-right{
+      z-index: 101;
+      position: fixed;
+      right: 40px;     
+    }
+    .glyphicon.glyphicon-chevron-left{
+      z-index: 101;
+      position: fixed;
+      left: 40px;     
+    }
+  }
+}
+
+.catalog-carousel{
+  .carousel{
+    height: 400px !important;
+    overflow-y: hidden;
+  }
+}

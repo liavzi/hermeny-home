@@ -1,0 +1,41 @@
+<div ng-controller="TagMaintenanceController as tmc">
+    <form name="TagMaintenanceForm" novalidate class="form-horizontal">
+        <div class="form-group " ng-class="{'has-error':TagMaintenanceForm.tagName.$invalid}">
+            <label class="control-label" for="tagName"> שם</label>
+            <input id="tagName" type="text" name="tagName" ng-model="tmc.tag.name" ng-required="true" class="form-control"/>
+            <p ng-show="TagMaintenanceForm.tagName.$invalid" class="help-block">אנא הכנס שם תגית</p>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="tagType"> סוג</label>
+            <select id="tagType" name="tagType"  ng-model="tmc.tag.type"  class="form-control" >
+                <option>group</option>
+                <option>occasion</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" > מוצרים</label>
+            <ui-select multiple ng-model="tmc.tag.productIds" theme="bootstrap">
+                <ui-select-match placeholder="Select product...">{{$item.name}} &lt;{{$item._id}}&gt;</ui-select-match>
+                <ui-select-choices repeat="product._id as product in tmc.products | orFilter:{name :$select.search,_id:$select.search}">
+                    <div ng-bind-html="''+product.name | highlight: $select.search |asTrusted"></div>
+                    <small>
+                        id: <span ng-bind-html="''+product._id | highlight: $select.search | asTrusted"></span>
+                    </small>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="tagImgUrl">כתובת תמונה(url)</label>
+            <input dir="ltr" id="tagImgUrl" type="text" name="tagImgUrl" ng-model="tmc.tag.imageUrl" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="tagOrder">סדר</label>
+            <input dir="ltr" id="tagOrder" type="number" name="tagOrder" ng-model="tmc.tag.order" class="form-control"/>
+        </div>      
+        <input type="submit" ng-disabled="TagMaintenanceForm.$invalid" class="btn btn-default" value="Submit" ng-click = "tmc.addTag()">
+        <ul ui-sortable ng-model="tmc.tag.productIds">
+            <div style="width : 40px;border:solid" ng-repeat="productId in tmc.tag.productIds">{{productId}}</li>
+        </ul>
+    </form>
+</div>
+

@@ -1,0 +1,14 @@
+{
+	"test": "productionTestValue"
+	,"paypal":{
+		"returnUrl" : "return=http://www.hermeny.co.il/#/afterPayPalSuccess"
+		,"cancelUrl" : "cancel_return=http://www.hermeny.co.il/#/payment/myOrder"
+		,"nvpApiUrl" : "https://api-3t.paypal.com/nvp"	
+		,"confirmUrl" : "https://www.paypal.com/cgi-bin/webscr"
+	}
+	,"passport":{
+		"google":{
+			"callbackURL" : "http://node-hermeny.rhcloud.com/auth/google/callback"
+		}				
+	}
+}

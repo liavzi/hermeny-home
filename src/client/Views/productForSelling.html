@@ -1,0 +1,30 @@
+<div class="thumbnail product-for-selling" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <img ng-src="{{product.imageUrl}}" ng-click="openDetails()" class="product-img img-responsive">
+    <div class="caption">
+        <div class="row product-name">
+            <h3>{{product.name}}</h3>
+        </div>
+        <div class="row product-price">
+            <div class="col-md-6">
+                <h4>{{::product.price.value}}<i class="fa fa-ils"></i></h4>
+            </div>
+            <div class="col-md-6">
+                <h4> {{::product.quantityInPkg}} יח'</h4>
+            </div>
+        </div>
+        <div class="row product-buttons">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="fa fa-plus  btn btn-default btn-sm input"  ng-click="product.quantity = product.quantity + 1"></button>
+                </span>
+                <input type="number" ng-model="product.quantity" class="form-control input-sm" min="0">
+                <span class="input-group-btn">
+                    <button class="fa fa-minus  btn btn-default btn-sm input" ng-disabled="product.quantity<=0" ng-click="product.quantity = product.quantity - 1"></button>
+                </span>
+            </div>
+        </div>
+        <div class="row add-to-order">
+            <button ng-disabled="product.quantity<=0" ng-click="addToCart()" class="btn btn-success">הוסף לסל</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-6">
+        <h1>צור קשר</h1>
+        <form name="contactform" class="form-horizontal" role="form" novalidate>
+            <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                <label for="inputName" class="col-lg-2 control-label">שם:</label>
+                <div class="col-lg-10">
+                    <input ng-model="contact.contactRequest.customerName" type="text" class="form-control" id="inputName" name="inputName" required>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                <label for="telNumber" class="col-lg-2 control-label">טלפון:</label>
+                <div class="col-lg-10">
+                    <input ng-model="contact.contactRequest.customerPhone" type="tel" class="form-control" id="telNumber" name="telNumber" required>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                <label for="inputEmail" class="col-lg-2 control-label">מייל:</label>
+                <div class="col-lg-10">
+                    <input ng-model="contact.contactRequest.customerMail" type="email" class="form-control" id="inputEmail" name="inputEmail" required>
+                </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                <label for="inputMessage" class="col-lg-2 control-label">תוכן הפנייה:</label>
+                <div class="col-lg-10">
+                    <textarea ng-model="contact.contactRequest.content" class="form-control" rows="4" id="inputMessage" name="inputMessage" required></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button ng-click="contact.create()"" class="btn btn-default">
+                        שלח
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

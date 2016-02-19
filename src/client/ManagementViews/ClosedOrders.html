@@ -1,0 +1,13 @@
+<div ng-controller="closedOrdersController as coc">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" ng-disabled="!coc.selectedOrder" ng-click="coc.editOrder(coc.selectedOrder)">ערוך</button>
+            <button ng-click="coc.deleteOrder(coc.selectedOrder)" class="נאמ btn-danger" ng-disabled="!coc.selectedOrder">מחק</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div ui-grid="coc.gridOptions" ui-grid-selection dir="rtl" class="my-grid"> </div>
+        </div>
+    </div>
+</div>

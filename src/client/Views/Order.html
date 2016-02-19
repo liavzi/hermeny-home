@@ -1,0 +1,21 @@
+<table class="table table-responsive">
+    <tr dir ="rtl">
+        <th>שם מוצר</th>
+        <th>כמות</th>
+        <th>מחיר</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="orderLine in orderModel.order.orderLines track by orderLine._id" ng-controller="OrderLineController" class="order-line">
+        <div >
+            <td>{{product.name}}</td>
+            <td>{{orderLine.quantity}}</td>
+            <td>{{orderLine.totalPrice}}</td>
+            <td><i class="fa fa-times remove-order-line-icon" ng-click="removeOrderLine(orderLine)"></i></td>
+        </div>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>{{orderModel.order.total}}</td>
+    </tr>
+</table>

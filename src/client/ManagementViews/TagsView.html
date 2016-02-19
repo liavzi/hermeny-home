@@ -1,0 +1,22 @@
+<div ng-controller="TagsViewController as tagsView">
+    <a class="btn btn-primary" href="#TagMaintenance">חדש</a>
+    <a ng-disabled="!tagsView.selectedTag" ng-click="tagsView.deleteTag(tagsView.selectedTag)" class="btn btn-danger">מחק</a>
+    <table class="table table-hover table-responsive">
+        <th>
+            <tbody>
+            <tr>
+                <th>שם</th>
+                <th>סוג</th>
+                <th>מוצרים</th>
+                <th>תמונה</th>
+            </tr>
+            <tr ng-repeat="tag in tagsView.tags" ng-click="tagsView.selectTag(tag)"  ng-class="{active:tagsView.selectedTag._id==tag._id}" ng-dblclick="tagsView.editTag(tag)">
+                <td>{{tag.name}}</td>
+                <td>{{tag.type}}</td>
+                <td>{{tag.productIds}}</td>
+                <td><img ng-src="{{tag.imageUrl}}"></td>
+            </tr>
+            </tbody>
+        </th>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+<a class="btn btn-primary" href="#ProductMaintenance">חדש</a>
+<a ng-disabled="!productViewController.selectedProduct" ng-click="productViewController.deleteProduct(productViewController.selectedProduct)" class="btn btn-danger">מחק</a>
+<table class="table table-hover table-responsive">
+    <th>
+        <tbody>
+            <tr>
+                <th>מזהה</th>
+                <th>שם</th>
+                <th>מחיר</th>
+                <th>תמונה</th>
+            </tr>
+            <tr ng-repeat="product in productViewController.products" ng-click="productViewController.selectProduct(product)"  ng-class="{active:productViewController.selectedProduct._id==product._id}" ng-dblclick="productViewController.editProduct(product)">
+                <td>{{product._id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.prices[0].value}}</td>
+                <td><img ng-src="{{product.imageUrl}}"></td>
+            </tr>
+        </tbody>
+    </th>
+</table>
