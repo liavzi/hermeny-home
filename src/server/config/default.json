@@ -16,8 +16,8 @@
 	}
 	,"passport":{
 		"google":{
-			"clientID" : "182243328912-qgkbqvdkv3g81lr5sbuithf04jrcns24.apps.googleusercontent.com"
-			,"clientSecret" : "tmol5ZgFbBvSd81Zi682DZaK"
+			"clientID" : "182243328912-tosnv2ml720ojj3l9sb5peqm590jj5ne.apps.googleusercontent.com"
+			,"clientSecret" : "M_fcwxRrwwEZZtf8vsCOJ9Ov"
 			,"callbackURL" : "http://localhost:8080/auth/google/callback"
 		}				
 	}
