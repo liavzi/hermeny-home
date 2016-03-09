@@ -1,5 +1,5 @@
 body {
-  background-color: #cfe9f1;
+  background-color: white;
   color: #333;
   font-family: "Roboto", Arial, sans-serif;
   font-size: large;
@@ -133,7 +133,9 @@ body {
 .navbar-header {
   float: none;
   position: absolute;
-  right: calc(50% - 182.5px);
+  right: calc(50% - 134.5px);
+  font-size: 38px;
+  font-family: -webkit-pictograph, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .navbar-brand {
   font-size: 50px;
@@ -156,7 +158,7 @@ body {
   cursor: pointer;
 }
 .navbar {
-  background-color: black;
+  background-color: #000066;
 }
 .navbar a {
   color: #ffffff;
