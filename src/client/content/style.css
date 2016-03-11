@@ -71,9 +71,6 @@ body {
   height: 250px;
   cursor: pointer;
 }
-.product-tag img {
-  height: 70%;
-}
 .product-tag .caption {
   vertical-align: top;
   height: 30%;
@@ -83,11 +80,9 @@ body {
 }
 .group-tag .product-tag img {
   display: block;
-  border-radius: 50%;
   border-style: solid;
   border-width: 2px;
   border-color: #ffcc00;
-  height: 65%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -269,7 +264,6 @@ body {
   position: fixed;
   left: 40px;
 }
-.catalog-carousel .carousel {
-  height: 400px !important;
-  overflow-y: hidden;
+.top-buffer {
+  margin-top: 20px;
 }

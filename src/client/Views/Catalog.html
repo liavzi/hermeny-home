@@ -1,5 +1,5 @@
 ﻿<div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-12">
         <div class="row">
             <div class="catalog-carousel">
                 <carousel interval="5000">
@@ -21,31 +21,13 @@
                 </carousel>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="h3 bold product-tags-title">בחר לפי סוג מוצר:</div>
-            </div>
-        </div>
-        <div class="row">
+        <div class="row top-buffer">
             <div ng-repeat="groupTag in groupTags" class="catalog-tag group-tag">
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <div product-tag tag="groupTag"></div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="h3 bold product-tags-title">בחר לפי אירוע:</div>
-            </div>
-        </div>
-        <div class="row">
-            <div ng-repeat="occasionTag in occasionTags" class="catalog-tag occasion-tag">
-                <div class="col-md-3">
-                    <div custom-class="thumbnail" product-tag tag="occasionTag"></div>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
